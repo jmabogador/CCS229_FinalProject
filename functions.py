@@ -17,7 +17,6 @@ def learn_pdf(file_path):
         obj = {
             "id": str(uuid.uuid4()),
             "text": content,
-            # You need to adjust this part based on how you're getting embeddings
             "embedding": None  # Placeholder, replace with actual embedding
         }
         content_chunks.append(obj)
@@ -35,9 +34,7 @@ def learn_pdf(file_path):
 
 def Answer_from_documents(user_query, api_key):
     openai.api_key = api_key
-    # Rest of your code remains the same
 
-    # You need to adjust this part based on how you're getting embeddings
     user_query_vector = None  # Placeholder, replace with actual vector
 
     openai = OpenAI()
@@ -45,12 +42,10 @@ def Answer_from_documents(user_query, api_key):
     with open('my_knowledgebase.json', 'r', encoding="utf-8") as jsonfile:
         data = json.load(jsonfile)
         for item in data:
-            # You need to adjust this part based on how you're handling embeddings
-            item['embeddings'] = None  # Placeholder, replace with actual embedding
+            item['embeddings'] = None  
 
         for item in data:
-            # You need to adjust this part based on how you're calculating similarity
-            item['similarities'] = None  # Placeholder, replace with actual similarity
+            item['similarities'] = None  
         sorted_data = sorted(data, key=lambda x: x['similarities'], reverse=True)
 
         context = ''
