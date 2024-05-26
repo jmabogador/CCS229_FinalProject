@@ -17,7 +17,7 @@ def learn_pdf(file_path):
         obj = {
             "id": str(uuid.uuid4()),
             "text": content,
-            "embedding": None  # Placeholder, replace with actual embedding
+            "embedding": None 
         }
         content_chunks.append(obj)
 
@@ -35,7 +35,7 @@ def learn_pdf(file_path):
 def Answer_from_documents(user_query, api_key):
     openai.api_key = api_key
 
-    user_query_vector = None  # Placeholder, replace with actual vector
+    user_query_vector = None  
 
     openai = OpenAI()
 
